@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { number } from "prop-types";
-
+import Add from "./components/Add";
 interface ITodo {
   text: string;
   complete: boolean;
@@ -39,11 +39,24 @@ function App() {
           return (
             <Fragment key={index}>
               <div>{todo.text}</div>
-              <button type="button" onClick={() => completeTodo(index)}>{todo.complete ? 'Incomplete' : 'complete'}</button>
+              <button type="button" onClick={() => completeTodo(index)}>
+                {todo.complete ? "Incomplete" : "complete"}
+              </button>
             </Fragment>
           );
         })}
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="App">
+        <header className="App-header">
+          <Add />
+        </header>
+      </div>
     </div>
   );
 }
