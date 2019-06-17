@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { number } from "prop-types";
 import Add from "./components/Add";
+import './App.css';
 interface ITodo {
   text: string;
   complete: boolean;
